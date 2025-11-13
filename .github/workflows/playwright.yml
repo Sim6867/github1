@@ -9,6 +9,8 @@ on:
 jobs:
   test:
     timeout-minutes: 60
+    env:
+      STORE_PASSWORD: ${{secrets.STORE_PASSWORD}}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
